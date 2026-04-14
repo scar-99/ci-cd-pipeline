@@ -46,8 +46,8 @@ jobs:
         context: .
         push: true
         tags: |
-          ${{ secrets.DOCKER_USERNAME }}/cicd-react-app:latest
-          ${{ secrets.DOCKER_USERNAME }}/cicd-react-app:${{ steps.vars.outputs.sha_short }}
+          ${{ secrets.DOCKER_USERNAME }}/ci-cd:latest
+          ${{ secrets.DOCKER_USERNAME }}/ci-cd:${{ steps.vars.outputs.sha_short }}
 
     - name: Slack Notification (Optional)
       if: success()
